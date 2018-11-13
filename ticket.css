@@ -1,0 +1,190 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|PT+Sans+Caption&subset=latin,cyrillic);
+*, *:before, *:after{transition:.3s linear}
+#div{
+  border-radius: 10px;
+  position: relative;
+  left: 25%;
+  width: 700px;
+  height: auto;
+  background-color: #ccccb3;
+}
+#red{
+  border-radius: 10px;
+  position: relative;
+  left: 0%;
+  float: left;
+  width: 320px;
+  height: 500px;
+  background-color: #e0e0d1;
+}
+input{
+  width: 250px;
+}
+#com{
+  width: 90%;
+      height: 50px;
+      position: absolute;
+      left: 5%;
+      top: 390px;
+}
+#comm{
+  width: 100%;
+  color: black;
+  height: 50px;
+  border-radius: 10px;
+  border: 0;
+}
+#enter{
+  display: none;
+}
+#comment{
+  margin: 40;
+  width: 83%;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  padding: 20;
+  flex-direction: row-reverse;
+}
+#name{
+  left: 0%;
+  position: absolute;
+  width: 300px;
+  top: 0%;
+}
+#namee{
+  text-align: left;
+  width: 15%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#text{
+  text-align: inherit;
+  width: 80%;
+  text-align: center;
+}
+#commm{
+font-family: 'PT Sans Caption', sans-serif;
+font-size: .8em
+}
+#dell{
+  text-decoration: none;
+  color:#4d79ff;
+  padding: 0;
+  margin: 0;
+}
+#dell:hover{
+  text-decoration:overline;
+}
+#tags{
+  position: absolute;
+  right: 0%;
+  width: 20%;
+  height: auto;
+  background-color: #000080;
+  color: white;
+  top: 50px;
+  border-radius: 5px;
+}
+#comform{
+  position: absolute;
+  top: auto;
+  width: 100%;
+  height: 100%;
+  background-color:#b3b3ff;
+}
+#tag{
+  position: relative;
+  width: auto;
+  height: 100%;
+  float: right;
+}
+#poss{
+  margin: 40;
+  width: 60%;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  padding: 20;
+  flex-direction: row-reverse;
+}
+#pole{
+  border-radius: 0 0 0 15px;
+  position: absolute;
+  right: 0%;
+  width: 300px;
+  background-color: bisque;
+  height: 50px;
+}
+#hhh{
+  border-radius: 15px;
+  position: absolute;
+  top: 10;
+  right: 0%;
+}
+#atag{
+  color:white;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: .8em;
+  text-decoration: none;
+}
+#atag:hover{
+  text-decoration: underline;
+}
+#search{
+  border-radius: 10px;
+  position: relative;
+  left: 25%;
+  width: 700px;
+  height: auto;
+  background-color: #ccccb3;
+}
+#tag_tik{
+  margin: auto;
+  width: 90%;
+  border-radius: 10px;
+  background-color: white;
+  height: 60px;
+  border: 10px double #ccccb3;
+
+}
+#name_usr{
+  position: absolute;
+  width: 20%;
+  height: 60px;
+  left: 5%;
+  text-align: center;
+}
+#name_tik{
+  position: absolute;
+  left: 25%;
+  width: 35%;
+  height: 60px;
+  text-align: center;
+}
+#tik_tag{
+  text-align: center;
+  position: absolute;
+  width: 35%;
+  height:60px;
+  right: 5%;
+}
+#tag:hover #del_tag{
+  display: block;
+  position: absolute;
+  border-radius: 5px;
+  /* left: 25%; */
+  margin: auto;
+  height: 18px;
+  top: -15px;
+  background-color: #4d79ff;
+}
+#tag #del_tag{
+  display: none;
+}
+#exit{
+  position: absolute;
+  right: 0%;
+}
