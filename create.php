@@ -33,8 +33,7 @@ include('connect.php');
       echo "Проект не создан, повторите попытку!";
     }
   }
-   ?>
-<a href="/my_projects.php">Назад</a>
+  ?>
+  <a href="/my_projects.php">Назад</a>
 </body>
 </html>
-

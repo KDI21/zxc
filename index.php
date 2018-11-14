@@ -12,20 +12,20 @@ if(isset($_SESSION['login'])){
 </head>
 <body>
   <div id=center_general>
-<div>
-  <h1>Вход</h1>
-</div>
-<div id=form>
-<form action="" method="post">
-  <input name="login" type="text" autocomplete="off" required autofocus placeholder="Логин" maxlength="35"/>
-  <input name="password" type="password" autocomplete="off" required autofocus placeholder="Пароль" maxlength="40"/>
-  <input type="submit" value="Войти" />
-</form>
-</div>
-<div>
-  <a href="/reg.php">Регистрация</a>
-</div>
-</div>
+    <div>
+      <h1>Вход</h1>
+    </div>
+    <div id=form>
+      <form action="" method="post">
+        <input name="login" type="text" autocomplete="off" required autofocus placeholder="Логин" maxlength="35"/>
+        <input name="password" type="password" autocomplete="off" required autofocus placeholder="Пароль" maxlength="40"/>
+        <input type="submit" value="Войти" />
+      </form>
+    </div>
+    <div>
+      <a href="/reg.php">Регистрация</a>
+    </div>
+  </div>
 </body>
 </html>
 <?php
@@ -43,7 +43,7 @@ if (isset($_POST['login'])){
   $result = mysqli_fetch_assoc($query);
   if (!empty($result['login'])){
     // if($result['password'] == $password){
-      if(password_verify($password,$result['password'])){
+    if(password_verify($password,$result['password'])){
       $_SESSION['login'] = $result['login'];
       $_SESSION['id'] = $result['user_id'];
       $_SESSION['rights'] = $result['rights'];
@@ -52,4 +52,4 @@ if (isset($_POST['login'])){
     }
   }
 }
- ?>
+?>

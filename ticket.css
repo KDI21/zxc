@@ -5,8 +5,8 @@
   text-align: center;
 }
 #prog_tab:hover{
- color:white;
- background-color: black;
+  color:white;
+  background-color: black;
 }
 #prog_link{
   text-decoration: none;
@@ -67,10 +67,10 @@
 
 #com{
   width: 90%;
-      height: 50px;
-      position: absolute;
-      left: 5%;
-      top: 390px;
+  height: 50px;
+  position: absolute;
+  left: 5%;
+  top: 390px;
 }
 #comm{
   width: 100%;
@@ -110,8 +110,8 @@
   text-align: center;
 }
 #commm{
-font-family: 'PT Sans Caption', sans-serif;
-font-size: .8em
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: .8em
 }
 #dell{
   text-decoration: none;

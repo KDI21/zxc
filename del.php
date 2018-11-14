@@ -15,11 +15,11 @@ if(isset($_GET['tag_id']) and isset($_GET['ticket_id'])){
   die;
 }
 if (isset($_GET['project_id'])){
-$id=$_GET['project_id'];
-$res = $mysqli->query("SELECT project_id FROM Projects where Projects.project_id = $id");
-$re = mysqli_fetch_assoc($res);
-$i = $re['project_id'];
-echo $i;
+  $id=$_GET['project_id'];
+  $res = $mysqli->query("SELECT project_id FROM Projects where Projects.project_id = $id");
+  $re = mysqli_fetch_assoc($res);
+  $i = $re['project_id'];
+  echo $i;
   $search = $mysqli->query("SELECT ticket_id FROM Tickets where Tickets.project_id = $i");
   while($res_search = $search->fetch_assoc()) {
     $tikid = $res_search['ticket_id'];
@@ -43,16 +43,16 @@ if (isset($_GET['ticket_id'])){
   $i = $re['ticket_id'];
   $id = $re['project_id'];
   echo $i;
-    $tags = "DELETE FROM `Tickets_Tags` WHERE Tickets_Tags.ticket_id=$i";
-    $del_tag = $mysqli->query($tags);
-    $comment = "DELETE FROM `Comments` WHERE Comments.ticket_id=$i";
-    $del_com = $mysqli->query($comment);
-    $query = "DELETE FROM `Tickets` WHERE Tickets.ticket_id=$i";
-    $result = $mysqli->query($query);
-    if($result == TRUE){
-      header("Location: /projects.php?project_id=$id");
+  $tags = "DELETE FROM `Tickets_Tags` WHERE Tickets_Tags.ticket_id=$i";
+  $del_tag = $mysqli->query($tags);
+  $comment = "DELETE FROM `Comments` WHERE Comments.ticket_id=$i";
+  $del_com = $mysqli->query($comment);
+  $query = "DELETE FROM `Tickets` WHERE Tickets.ticket_id=$i";
+  $result = $mysqli->query($query);
+  if($result == TRUE){
+    header("Location: /projects.php?project_id=$id");
   }
-  }
+}
 if (isset($_GET['comment_id'])){
   $id=$_GET['comment_id'];
   $res = $mysqli->query("SELECT comment_id, ticket_id FROM Comments WHERE Comments.comment_id=$id");
