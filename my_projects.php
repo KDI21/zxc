@@ -17,38 +17,14 @@ if ($_SESSION['rights'] == 'adm'){
 <html>
 <head>
   <title>Projects</title>
-<style>
-table{
-  height: 300px;
-  width: 500px;
-  background-color: black;
-  text-align: center;
-}
-#a{
-  text-decoration: none;
-  color:white;
-}
-#a:hover{
-  text-decoration: underline;
-}
-td:hover{
-  background-color: green;
-}
-#p{
-  top: inherit;
-  text-align: right;
-}
-#del{
-  text-align: left;
-}
-</style>
+<link rel="stylesheet" href="/ticket.css">
 </head>
 <center>
 <body>
   <div id=exit>
     <a href="exit.php"><input type="button" value="Выход" id=b_exit></a>
   </div>
-<table border="1">
+<table border="1" id=general_table>
 <caption>Имена Проектов:</caption>
 <?php
 include('connect.php');
@@ -56,16 +32,16 @@ include('connect.php');
     while($ro = $res->fetch_assoc()) {
     ?>
   <tr>
-    <td>
+    <td id=res_tab>
       <a href="projects.php?project_id=<?php echo $ro["project_id"];?>" id="a"><?php echo $ro["name"]?></a>
-    <div id="p">
+    <div id="lin_k">
       <?php if (is_allowed($ro['user_id'])): ?>
         <a href="edit.php?project_id=<?php echo $ro["project_id"];?>" id="a">Редактировать</a>
       <?php endif; ?>
     </div>
-    <div id=del>
+    <div id=del_ite>
       <?php if (is_allowed($ro['user_id'])):?>
-    <a href="del.php?project_id=<?php echo $ro["project_id"];?>" id="a">Удалить</a>
+    <a href="del_ite.php?project_id=<?php echo $ro["project_id"];?>" id="a">Удалить</a>
   <?php endif;?>
     </div>
     </td>

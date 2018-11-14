@@ -8,21 +8,11 @@ if(isset($_SESSION['login'])){
 <html>
 <head>
   <title>Баг-система</title>
-  <style>
-  #center{
-    position: absolute;
-    background-color: #00004d;
-    width: 60%;
-    height: 60%;
-    left:20%;
-    top: 20%;
-    border-radius: 10px;
-  }
-  </style>
+<link rel="stylesheet" href="/ticket.css">
 </head>
 <body>
-  <div id=center>
-<div id=enter>
+  <div id=center_general>
+<div>
   <h1>Регистрация</h1>
 </div>
 <div id=form>

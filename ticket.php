@@ -32,7 +32,6 @@ $i = $_GET['ticket_id'];
 $res = $mysqli->query("SELECT ticket_id, name, user_id, project_id, description, assignee_id, status, file_name FROM Tickets WHERE Tickets.ticket_id=$i");
 $result = mysqli_fetch_assoc($res);
 }
-
 ?>
 <html>
 <head>
@@ -174,17 +173,14 @@ if(is_allowed($result['user_id'])):
      if(isset($_POST['tagname'])){
        $tagname = $_POST['tagname'];
        $tikid = $_POST['tikis'];
-
        $result_tag = $mysqli->query("SELECT EXISTS (SELECT name FROM Tags WHERE name='$tagname')");
        $res = mysqli_fetch_assoc($result_tag);
        foreach ($res as $key => $value) {
          if ($value == 0){
                  $query = "INSERT INTO Tags (name) VALUES ('$tagname')";
                  $res_tag = $mysqli->query($query);
-
                  $result_search = $mysqli->query("SELECT tag_id FROM Tags where Tags.name = '$tagname'");
                  $res_search = mysqli_fetch_assoc($result_search);
-
                  $tagid = $res_search['tag_id'];
                  $edit = "INSERT INTO Tickets_Tags (ticket_id, tag_id) VALUES ($tikid, $tagid)";
                  $res_edit = $mysqli->query($edit);
@@ -192,7 +188,6 @@ if(is_allowed($result['user_id'])):
          else{
              $result_search = $mysqli->query("SELECT tag_id FROM Tags where Tags.name = '$tagname'");
              $res_search = mysqli_fetch_assoc($result_search);
-
              $tagid = $res_search['tag_id'];
              $edit = "INSERT INTO Tickets_Tags (ticket_id, tag_id) VALUES ($tikid, $tagid)";
              $res_edit = $mysqli->query($edit);

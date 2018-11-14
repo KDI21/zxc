@@ -1,5 +1,52 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab|PT+Sans+Caption&subset=latin,cyrillic);
 *, *:before, *:after{transition:.3s linear}
+#prog_tab{
+  width:70px;
+  text-align: center;
+}
+#prog_tab:hover{
+ color:white;
+ background-color: black;
+}
+#prog_link{
+  text-decoration: none;
+  color: black;
+}
+#prog_link:hover{
+  color: white;
+}
+#center_general{
+  position: absolute;
+  background-color: #00004d;
+  width: 60%;
+  height: 60%;
+  left:20%;
+  top: 20%;
+  border-radius: 10px;
+}
+#general_table{
+  height: 300px;
+  width: 500px;
+  background-color: black;
+  text-align: center;
+}
+#a{
+  text-decoration: none;
+  color:white;
+}
+#a:hover{
+  text-decoration: underline;
+}
+#res_tab:hover{
+  background-color: green;
+}
+#lin_k{
+  top: inherit;
+  text-align: right;
+}
+#del_ite{
+  text-align: left;
+}
 #div{
   border-radius: 10px;
   position: relative;
@@ -17,9 +64,7 @@
   height: 500px;
   background-color: #e0e0d1;
 }
-input{
-  width: 250px;
-}
+
 #com{
   width: 90%;
       height: 50px;

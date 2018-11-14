@@ -17,23 +17,7 @@ include('functions.php');
 <html>
 <head>
   <title>Projects</title>
-<style>
-td{
-  width:70px;
-  text-align: center;
-}
-td:hover{
- color:white;
- background-color: black;
-}
-#aa{
-  text-decoration: none;
-  color: black;
-}
-#aa:hover{
-  color: white;
-}
-</style>
+<link rel="stylesheet" href="/ticket.css">
 </head>
 <body>
   <div id=exit>
@@ -57,9 +41,9 @@ td:hover{
     <th>User ID</th>
   </tr>
   <tr>
-    <td><?php echo $re["project_id"]; ?></td>
-    <td><?php echo $re["name"]; ?></td>
-    <td><?php echo $id; ?></td>
+    <td id=prog_tab><?php echo $re["project_id"]; ?></td>
+    <td id=prog_tab><?php echo $re["name"]; ?></td>
+    <td id=prog_tab><?php echo $id; ?></td>
   </tr>
 </table><br><br>
 <table border=1>
@@ -78,10 +62,10 @@ td:hover{
   while($resulte = $result->fetch_assoc()) {
     ?>
   <tr id=hei>
-    <td><?php echo $id; ?></td>
-    <td><a href="/ticket.php?ticket_id=<?php echo $resulte['ticket_id']; ?>" id=aa ><?php echo $resulte["name"]; ?></a></td>
-    <td><?php echo $resulte["assignee_id"]; ?></td>
-    <td><?php echo $resulte["status"]; ?></td>
+    <td id=prog_tab><?php echo $id; ?></td>
+    <td id=prog_tab><a href="/ticket.php?ticket_id=<?php echo $resulte['ticket_id']; ?>" id=prog_link ><?php echo $resulte["name"]; ?></a></td>
+    <td id=prog_tab><?php echo $resulte["assignee_id"]; ?></td>
+    <td id=prog_tab><?php echo $resulte["status"]; ?></td>
   </tr>
 <?php }
 ?>
@@ -122,7 +106,6 @@ if(isset($_POST['sub'])){
     $userid = $_POST['useridd'];
     $about = $_POST['about'];
     $status = $_POST['statuss'];
-
     $uploadInfo = $_FILES['upload'];
     $up = $uploadInfo['name'];
     if (!empty($up)){
@@ -163,6 +146,6 @@ if(isset($_POST['sub'])){
 }
 $mysqli->close();
 ?>
-<a href="/my_projects.php" id=aa >Назад</a>
+<a href="/my_projects.php" id=prog_link >Назад</a>
 </body>
 </html>
