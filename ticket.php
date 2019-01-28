@@ -14,11 +14,7 @@ else{
 }
 include('connect.php');
 include('functions.php');
-// echo $_GET['ticket_id'];
-// if ((!isset($_GET['ticket_id'])) || (!isset($_GET['tag_id']))){
-//   echo "<center><H1>ERROR 404</h1></center>";
-//   die;
-// }
+
 if(isset($_GET['tag_id']) and isset($_GET['ticket_id'])){
   $tikid = $_GET['ticket_id'];
   $tagid = $_GET['tag_id'];
